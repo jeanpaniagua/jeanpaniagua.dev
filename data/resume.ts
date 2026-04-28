@@ -2,7 +2,7 @@ import type { ResumeData } from '../types/resume'
 
 export const resumeData: ResumeData = {
   profile: {
-    name: 'Jean Carlo Paniagua Bastos',
+    name: 'Jean Paniagua',
     title: 'Full Stack Developer',
     headline:
       'Full Stack Developer building production web apps with Vue, TypeScript, and Node.',
