@@ -26,12 +26,12 @@ function formatMonth(value: string) {
     <!-- Connector + dot -->
     <span
       aria-hidden="true"
-      class="absolute left-2 top-2 size-2 rounded-full bg-accent ring-4 ring-bg"
+      class="absolute left-2 top-3 size-2 rounded-full bg-accent ring-4 ring-bg"
     />
     <span
       v-if="!props.last"
       aria-hidden="true"
-      class="absolute left-[11px] top-4 -bottom-6 w-px bg-border-strong"
+      class="absolute left-[11px] top-5 -bottom-8 w-px bg-border-strong"
     />
 
     <article class="card p-5">
@@ -50,16 +50,41 @@ function formatMonth(value: string) {
         </p>
       </header>
 
-      <ul class="ml-4 list-disc space-y-1.5 text-fg-muted">
+      <p v-if="item.summary" class="text-fg-muted leading-relaxed">
+        {{ item.summary }}
+      </p>
+
+      <ul
+        v-if="item.highlights && item.highlights.length"
+        class="ml-4 mt-3 list-disc space-y-1.5 text-fg-muted"
+      >
         <li v-for="h in item.highlights" :key="h">
           {{ h }}
         </li>
       </ul>
 
-      <div v-if="item.stack && item.stack.length" class="mt-4 flex flex-wrap gap-2">
+      <div
+        v-if="item.stack && item.stack.length"
+        class="mt-4 flex flex-wrap gap-2"
+      >
         <span v-for="tech in item.stack" :key="tech" class="chip">
           {{ tech }}
         </span>
+      </div>
+
+      <!-- Nested projects -->
+      <div
+        v-if="item.projects && item.projects.length"
+        class="mt-6 border-t border-border pt-5"
+      >
+        <p class="label-mono mb-3">Selected projects</p>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <ProjectCard
+            v-for="p in item.projects"
+            :key="p.name"
+            :project="p"
+          />
+        </div>
       </div>
     </article>
   </li>

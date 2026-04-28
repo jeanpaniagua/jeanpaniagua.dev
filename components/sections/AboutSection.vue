@@ -26,12 +26,12 @@ const paragraphs = profile.bio.split('\n\n')
       <aside class="card p-5">
         <p class="label-mono mb-2">Currently</p>
         <p class="text-fg">
-          Full Stack Engineer @
+          {{ profile.title }} @
           <span class="text-accent">Gorilla Logic</span>
         </p>
         <p class="mt-3 text-sm text-fg-muted">
-          Building TypeScript and Python services for clients across fintech,
-          healthcare, and SaaS.
+          Building Vue and Node services for long-running client engagements
+          across web and progressive web apps.
         </p>
       </aside>
     </div>

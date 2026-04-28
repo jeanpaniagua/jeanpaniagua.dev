@@ -18,6 +18,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Auto-import components from subfolders without path-prefixed names —
+  // <HeroSection /> instead of <SectionsHeroSection />.
+  components: [
+    { path: '~/components', pathPrefix: false },
+  ],
+
   fonts: {
     families: [
       { name: 'Inter', provider: 'google', weights: [400, 500, 600, 700] },
@@ -27,7 +33,7 @@ export default defineNuxtConfig({
 
   site: {
     url: SITE_URL,
-    name: `${resumeData.profile.name} — ${resumeData.profile.headline}`,
+    name: `${resumeData.profile.name} — ${resumeData.profile.title}`,
   },
 
   app: {

@@ -1,17 +1,19 @@
 <script setup lang="ts">
 const { profile } = useResume()
 
+const description = profile.bio.split('\n\n')[0]
+
 useSeoMeta({
-  title: profile.headline,
-  description: profile.bio.split('\n')[0],
-  ogTitle: `${profile.name} — ${profile.headline}`,
-  ogDescription: profile.bio.split('\n')[0],
+  title: profile.title,
+  description,
+  ogTitle: `${profile.name} — ${profile.title}`,
+  ogDescription: description,
   ogType: 'website',
   ogUrl: 'https://jeanpaniagua.dev',
   ogImage: '/og-image.png',
   twitterCard: 'summary_large_image',
-  twitterTitle: `${profile.name} — ${profile.headline}`,
-  twitterDescription: profile.bio.split('\n')[0],
+  twitterTitle: `${profile.name} — ${profile.title}`,
+  twitterDescription: description,
   twitterImage: '/og-image.png',
 })
 
@@ -24,8 +26,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: profile.name,
-        jobTitle: profile.headline,
-        email: `mailto:${profile.email}`,
+        jobTitle: profile.title,
         url: 'https://jeanpaniagua.dev',
         sameAs: profile.socials.map((s) => s.url),
       }),

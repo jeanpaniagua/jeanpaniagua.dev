@@ -2,8 +2,8 @@
 const { profile } = useResume()
 
 useSeoMeta({
-  title: profile.headline,
-  description: `${profile.name} — ${profile.headline} based in ${profile.location}.`,
+  title: profile.title,
+  description: `${profile.name} — ${profile.title} based in ${profile.location}.`,
 })
 </script>
 
@@ -13,6 +13,8 @@ useSeoMeta({
     <AboutSection />
     <ExperienceSection />
     <SkillsSection />
+    <EducationSection />
+    <TestimonialsSection />
     <ContactSection />
   </div>
 </template>

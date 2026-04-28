@@ -10,19 +10,21 @@ const { profile } = useResume()
     class="container-page flex min-h-[80vh] flex-col justify-center py-20"
     aria-labelledby="hero-heading"
   >
-    <span class="label-mono mb-4">Full Stack Engineer</span>
+    <span class="label-mono mb-4">{{ profile.title }}</span>
 
     <h1
       id="hero-heading"
       class="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl"
     >
       {{ profile.name }}
-      <span class="ml-1 inline-block h-[0.9em] w-[2px] translate-y-[2px] animate-pulse bg-accent align-baseline" />
+      <span
+        class="ml-1 inline-block h-[0.9em] w-[2px] translate-y-[2px] animate-pulse bg-accent align-baseline"
+      />
     </h1>
 
     <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
-      {{ profile.headline }} with 5 years of experience shipping production web apps. Currently at
-      <span class="text-fg">Gorilla Logic</span>.
+      {{ profile.headline }} {{ profile.yearsOfExperience }} years shipping production
+      software at <span class="text-fg">Gorilla Logic</span>.
     </p>
 
     <p class="mt-3 inline-flex items-center gap-2 font-mono text-sm text-fg-muted">
