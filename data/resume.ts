@@ -15,7 +15,7 @@ export const resumeData: ResumeData = {
     ].join('\n\n'),
     email: 'jeanpaniaguab@gmail.com',
     availability: 'Open to senior remote roles',
-    cvUrl: 'https://www.linkedin.com/in/jean-carlo-paniagua-bastos/',
+    cvUrl: '/cv.pdf',
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/jean-carlo-paniagua-bastos/' },
     ],

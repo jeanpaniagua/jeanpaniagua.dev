@@ -51,9 +51,10 @@ const paragraphs = profile.bio.split('\n\n')
             :href="profile.cvUrl"
             target="_blank"
             rel="noopener noreferrer"
+            download
             class="text-sm text-accent underline-offset-2 hover:underline"
           >
-            View full CV →
+            Download CV (PDF) →
           </a>
         </div>
       </aside>

@@ -54,10 +54,11 @@ const { profile } = useResume()
         :href="profile.cvUrl"
         target="_blank"
         rel="noopener noreferrer"
+        download
         class="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium text-fg transition hover:border-accent hover:text-accent"
       >
         <Download :size="14" aria-hidden="true" />
-        View CV
+        Download CV
       </a>
       <a
         href="#experience"
