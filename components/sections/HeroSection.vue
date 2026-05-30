@@ -35,10 +35,9 @@ const { profile } = useResume()
       style="animation-delay: 80ms"
     >
       <span class="block">{{ profile.name.split(' ')[0] }}</span>
-      <span class="block text-fg-muted">{{ profile.name.split(' ').slice(1).join(' ') }}</span>
-      <span
-        class="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[2px] animate-pulse bg-accent align-baseline"
-      />
+      <span class="block text-fg-muted">{{ profile.name.split(' ').slice(1).join(' ') }}<span
+        class="ml-1 inline-block h-[0.85em] w-[3px] animate-pulse bg-accent align-middle"
+      /></span>
     </h1>
 
     <!-- Headline — simplified, no duplicate "5 years" -->
