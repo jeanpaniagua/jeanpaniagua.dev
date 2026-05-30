@@ -14,15 +14,18 @@ withDefaults(defineProps<Props>(), { as: 'h2' })
 </script>
 
 <template>
-  <div class="mb-10 flex flex-col gap-2">
+  <div class="mb-12 space-y-2">
     <span class="label-mono">{{ eyebrow }}</span>
     <component
       :is="as"
       :id="id"
-      class="text-2xl font-semibold tracking-tight text-fg sm:text-3xl"
+      class="text-3xl font-semibold tracking-tight text-fg sm:text-4xl"
     >
       {{ title }}
     </component>
-    <div class="h-px w-12 bg-border-strong" />
+    <div class="flex items-center gap-3 pt-1">
+      <div class="h-px w-10 bg-accent opacity-60" />
+      <div class="h-px flex-1 bg-border" />
+    </div>
   </div>
 </template>
