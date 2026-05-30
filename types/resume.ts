@@ -17,6 +17,10 @@ export interface Profile {
   bio: string
   email: string
   socials: SocialLink[]
+  /** Short availability blurb shown in the hero / about sidebar (e.g. "Open to senior remote roles"). */
+  availability?: string
+  /** URL to a downloadable PDF résumé. */
+  cvUrl?: string
 }
 
 export interface Project {

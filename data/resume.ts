@@ -9,11 +9,13 @@ export const resumeData: ResumeData = {
     location: 'Cartago, Costa Rica',
     yearsOfExperience: 5,
     bio: [
-      'Full-stack engineer with 5 years of experience building and shipping production web applications through Gorilla Logic, embedded in client teams across property management, insurance, and home services.',
+      'I\'m a full-stack engineer from Cartago, Costa Rica — a small city two hours from the coast and arguably the best coffee in the country. I\'ve spent the last 5 years embedded in client teams through Gorilla Logic, building production systems across property management, insurance, and home services.',
       'My work spans the entire stack — Vue 3 and Next.js frontends, GraphQL and REST APIs, NestJS and Node.js backends, PostgreSQL, Redis, Prisma, and cloud infra on GCP. I\'ve worked on platforms with 60-person eng teams and as one of 6 engineers keeping a core product running after a major org restructure.',
-      'Recently I\'ve leaned into AI-augmented development — using spec-driven workflows with Cursor and Claude to take our team from under 50 to 100+ story points per sprint. That\'s not a marginal gain; it\'s a different way of working.',
+      'Lately I\'ve been deep in AI-augmented development — using spec-driven workflows with Cursor and Claude to take my team from under 50 to 100+ story points per sprint. That\'s not a marginal efficiency gain; it\'s genuinely a different way of building software. When I\'m not coding I\'m probably watching football, listening to anything from cumbia to post-punk, or exploring what else this country has to offer.',
     ].join('\n\n'),
     email: 'jeanpaniaguab@gmail.com',
+    availability: 'Open to senior remote roles',
+    cvUrl: 'https://www.linkedin.com/in/jean-carlo-paniagua-bastos/',
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/jean-carlo-paniagua-bastos/' },
     ],
