@@ -3,15 +3,15 @@ import type { ResumeData } from '../types/resume'
 export const resumeData: ResumeData = {
   profile: {
     name: 'Jean Paniagua',
-    title: 'Full Stack Developer',
+    title: 'Full Stack Engineer',
     headline:
-      'Full Stack Developer building production web apps with Vue, TypeScript, and Node.',
+      'Full Stack Engineer building production web apps with Vue 3, Next.js, TypeScript, Node.js, and GraphQL — 5 years in consulting.',
     location: 'Cartago, Costa Rica',
     yearsOfExperience: 5,
     bio: [
-      'Full-stack developer with 5 years of experience building and scaling production web applications. I specialize in dynamic, user-friendly interfaces with Vue.js, backed by robust Node.js and GraphQL services. Tailwind keeps the visual layer fast and consistent.',
-      'I lean on AI tooling — Copilot, Cursor, Claude — to move faster on repetitive work and free up focus for the genuinely interesting problems: clean architecture, testing strategies, and the small decisions that make code maintainable.',
-      "Whether it's frontend or backend, I care about turning complex challenges into elegant solutions and shipping software that's pleasant to use and pleasant to inherit.",
+      'Full-stack engineer with 5 years of experience building and shipping production web applications through Gorilla Logic, embedded in client teams across property management, insurance, and home services.',
+      'My work spans the entire stack — Vue 3 and Next.js frontends, GraphQL and REST APIs, NestJS and Node.js backends, PostgreSQL, Redis, Prisma, and cloud infra on GCP. I\'ve worked on platforms with 60-person eng teams and as one of 6 engineers keeping a core product running after a major org restructure.',
+      'Recently I\'ve leaned into AI-augmented development — using spec-driven workflows with Cursor and Claude to take our team from under 50 to 100+ story points per sprint. That\'s not a marginal gain; it\'s a different way of working.',
     ].join('\n\n'),
     email: 'jeanpaniaguab@gmail.com',
     socials: [
@@ -19,83 +19,81 @@ export const resumeData: ResumeData = {
     ],
   },
 
-  // Reverse-chronological. All three roles at Gorilla Logic — full progression
-  // from intern to consultant. Selected projects sit under the most senior role
-  // since that's where the bulk of the shipped work lives.
+  // Reverse-chronological. All roles at Gorilla Logic as a consultant —
+  // client field shows who the work was actually done for.
   experience: [
     {
       company: 'Gorilla Logic',
+      client: 'Goosehead Insurance',
       role: 'Consultant Full Stack Developer',
-      start: '2022-07',
+      start: '2025-12',
       end: 'Present',
       location: 'Costa Rica · Remote',
       summary:
-        'Lead full stack delivery on long-running client engagements, working across Vue 3, TypeScript, Node, GraphQL, and supporting infra.',
-      stack: ['Vue 3', 'TypeScript', 'Apollo', 'Node.js', 'NestJS', 'GraphQL', 'PostgreSQL'],
+        'Full-stack engineer on the customer portal for Goosehead Insurance, one of the largest independent insurance brokerages in the US (200+ carriers).',
+      highlights: [
+        'Delivered Mercury Auto integration — API integration, UI flows, and data mapping — working across two pods.',
+        'Delivered Progressive Home integration as a single-pod engagement, from API integration through customer-facing UI.',
+        'Adopted spec-driven development with AI tooling (Cursor, Claude) — team went from under 50 to 100+ story points per sprint, more than doubling delivery velocity.',
+        'Operating in a lean pod structure (3 devs + tech lead + QA) with full-stack ownership across frontend and backend.',
+      ],
+      stack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Prisma', 'Redis', 'Salesforce', 'Playwright'],
+    },
+    {
+      company: 'Gorilla Logic',
+      client: 'PURE Property Management',
+      role: 'Consultant Full Stack Developer',
+      start: '2022-07',
+      end: '2025-11',
+      location: 'Costa Rica · Remote',
+      summary:
+        'Embedded full-stack engineer on PURE\'s core platform — an integrated system managing properties, owners, vendors, accounting, communications, and operational flows for one of the largest property management companies in the US.',
+      highlights: [
+        'Joined a ~60-person engineering org on the core team, responsible for all entities, communication flows, and major operational processes.',
+        'Implemented LaunchDarkly feature flag system integrated with Segment, enabling product to toggle features at the corporation, brand, or individual user level.',
+        'Built Twilio and Gmail API integrations powering in-app communication between property managers, owners, and residents.',
+        'Developed background data jobs for automated cleanup and table updates across the platform.',
+        'Delivered a critical business feature end-to-end in under 2 weeks from requirements to production.',
+        'Following a 50% org restructure in July 2024, became one of 5 remaining engineers — expanded scope to cover additional modules previously owned by other teams.',
+        'Promoted AI-accelerated development within the team, guiding teammates on adopting AI tooling to improve productivity and delivery speed.',
+      ],
+      stack: ['Vue 3', 'TypeScript', 'Apollo', 'Node.js', 'NestJS', 'GraphQL', 'PostgreSQL', 'Tailwind'],
       projects: [
-        {
-          name: 'Property Management Tool',
-          description:
-            'Property management progressive web app integrating Twilio and Gmail APIs for in-app communication. Built the frontend with Vue 3, Vuex, TypeScript, Tailwind, and Apollo, and the backend with Node.js, GraphQL, NestJS, and Sequelize.',
-          stack: [
-            'Vue 3',
-            'Vuex',
-            'TypeScript',
-            'Tailwind',
-            'Apollo',
-            'Node.js',
-            'GraphQL',
-            'NestJS',
-            'Sequelize',
-            'Twilio',
-            'Gmail API',
-          ],
-        },
         {
           name: 'Houses Catalog Landing Page',
           description:
             'Interactive marketing site showcasing diverse house models. Built with React, TypeScript, and Gatsby for static-site performance and snappy navigation.',
           stack: ['React', 'TypeScript', 'Gatsby'],
         },
-        {
-          name: 'Vue Components Design System',
-          description:
-            'Reusable component library inspired by Bootstrap, built with Vue 3 for dynamic behavior and Tailwind for consistent styling. Shared across multiple internal projects.',
-          stack: ['Vue 3', 'TypeScript', 'Tailwind'],
-        },
-        {
-          name: 'Services Marketplace (PWA)',
-          description:
-            'Progressive web app for a services marketplace. Frontend built with Vue 2, Vuex, Tailwind, and Axios; integrated with a Java backend.',
-          stack: ['Vue 2', 'Vuex', 'Tailwind', 'Axios', 'Java'],
-        },
       ],
     },
     {
       company: 'Gorilla Logic',
+      client: 'Gorilla Logic Internal',
       role: 'Associate Full Stack Developer',
       start: '2021-07',
       end: '2022-07',
       location: 'Costa Rica · Remote',
       summary:
-        'Expanded scope from frontend to full stack work, picked up backend ownership, and started mentoring incoming engineers.',
+        'Contributed to an internal design-agnostic Vue component library — a headless system where component behavior was controlled entirely in Vue and styling was applied externally via config files, allowing any design system to be layered on top.',
       highlights: [
-        'Took on full feature delivery across Vue and Node services.',
-        'Contributed to code reviews, testing strategy, and onboarding for new hires.',
+        'Built reusable, theme-independent Vue 3 components with clean separation between behavior and presentation.',
+        'Deepened expertise in Vue\'s component model, reactivity system, props API, and slot architecture.',
       ],
-      stack: ['Vue', 'TypeScript', 'Node.js', 'GraphQL'],
+      stack: ['Vue 3', 'TypeScript', 'Tailwind'],
     },
     {
       company: 'Gorilla Logic',
+      client: 'HomeAdvisor / Angie\'s List (now Angi)',
       role: 'Full Stack Developer Intern',
       start: '2021-02',
       end: '2021-07',
       location: 'Costa Rica · Remote',
       summary:
-        'Onboarded onto a production client codebase and shipped frontend and backend changes alongside senior engineers.',
+        'Joined during the merger of HomeAdvisor and Angie\'s List into a unified platform. The team was building the integration layer that would power both brands from a single codebase — shared database, unified accounts, and a single website dynamically serving domain-specific content per brand.',
       highlights: [
-        'Ramped on Vue, TypeScript, and Node within an established consulting team.',
-        'Delivered first production PRs and learned the consultancy delivery cadence.',
+        'Contributed to the frontend and backend integration work merging two large consumer platforms.',
+        'Worked on a production codebase serving millions of homeowners and contractors across both brands.',
       ],
       stack: ['Vue', 'JavaScript', 'Node.js'],
     },
@@ -106,23 +104,29 @@ export const resumeData: ResumeData = {
       title: 'Frontend',
       items: [
         'Vue.js (2 & 3)',
-        'Vuex',
-        'Pinia',
+        'Next.js',
+        'React',
+        'Nuxt 3',
         'TypeScript',
         'JavaScript',
-        'Apollo',
         'Tailwind CSS',
-        'React',
+        'Apollo',
+        'Vuex',
+        'Pinia',
         'Gatsby',
       ],
     },
     {
       title: 'Backend',
-      items: ['Node.js', 'NestJS', 'GraphQL', 'REST', 'Sequelize', 'Java'],
+      items: ['Node.js', 'NestJS', 'GraphQL', 'REST', 'Prisma', 'Sequelize', 'Redis', 'Java'],
     },
     {
       title: 'Databases & Cloud',
-      items: ['PostgreSQL', 'SQL Server', 'Google Cloud (GCP)'],
+      items: ['PostgreSQL', 'Redis', 'SQL Server', 'Google Cloud (GCP)'],
+    },
+    {
+      title: 'Integrations',
+      items: ['Twilio', 'Gmail API', 'LaunchDarkly', 'Segment', 'Salesforce'],
     },
     {
       title: 'DevOps & Tooling',
@@ -130,7 +134,7 @@ export const resumeData: ResumeData = {
     },
     {
       title: 'Testing',
-      items: ['Jest', 'Vitest'],
+      items: ['Jest', 'Vitest', 'Playwright'],
     },
     {
       title: 'AI-Assisted Development',

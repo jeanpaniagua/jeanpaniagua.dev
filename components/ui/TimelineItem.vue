@@ -41,6 +41,9 @@ function formatMonth(value: string) {
             {{ item.role }}
             <span class="text-fg-muted">@ {{ item.company }}</span>
           </h3>
+          <p v-if="item.client" class="text-sm font-medium text-accent">
+            {{ item.client }}
+          </p>
           <p v-if="item.location" class="text-sm text-fg-muted">
             {{ item.location }}
           </p>

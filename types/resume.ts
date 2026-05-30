@@ -27,6 +27,8 @@ export interface Project {
 
 export interface Experience {
   company: string
+  /** Client name when the company is a consultancy (e.g. Gorilla Logic → PURE, Goosehead). */
+  client?: string
   role: string
   /** ISO YYYY-MM */
   start: string
