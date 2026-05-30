@@ -17,7 +17,7 @@ defineProps<{ testimonial: Testimonial }>()
       &ldquo;{{ testimonial.quote }}&rdquo;
     </blockquote>
 
-    <figcaption class="mt-5 flex items-baseline gap-2">
+    <figcaption class="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
       <span class="font-medium text-fg">{{ testimonial.author }}</span>
       <span class="text-sm text-fg-muted">
         {{ testimonial.authorRole }} @ {{ testimonial.authorCompany }}

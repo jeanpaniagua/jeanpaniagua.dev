@@ -7,7 +7,7 @@ const { profile } = useResume()
 <template>
   <section
     id="top"
-    class="container-page relative flex min-h-[90vh] flex-col justify-center py-24"
+    class="container-page relative flex min-h-[90vh] flex-col justify-center overflow-x-clip py-16 sm:py-24"
     aria-labelledby="hero-heading"
   >
     <!-- Accent spotlight behind name -->

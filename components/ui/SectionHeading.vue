@@ -19,7 +19,7 @@ withDefaults(defineProps<Props>(), { as: 'h2' })
     <component
       :is="as"
       :id="id"
-      class="text-3xl font-semibold tracking-tight text-fg sm:text-4xl"
+      class="text-2xl font-semibold tracking-tight text-fg sm:text-3xl lg:text-4xl"
     >
       {{ title }}
     </component>

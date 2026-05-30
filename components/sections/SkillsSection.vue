@@ -20,12 +20,12 @@ const restGroups = skills.slice(2)
 
     <!-- Bento-style grid: featured groups span full row, rest in 2-col -->
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Featured: Frontend & Backend — span 1.5 cols each -->
+      <!-- Featured: Frontend spans full width at sm, 2/3 at lg -->
       <div
         v-for="group in featuredGroups"
         :key="group.title"
-        class="card p-5 lg:col-span-1"
-        :class="group.title === 'Frontend' ? 'lg:col-span-2' : ''"
+        class="card p-5"
+        :class="group.title === 'Frontend' ? 'sm:col-span-2 lg:col-span-2' : ''"
       >
         <h3 class="label-mono mb-3">{{ group.title }}</h3>
         <ul class="flex flex-wrap gap-2">

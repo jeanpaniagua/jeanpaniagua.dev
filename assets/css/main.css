@@ -4,6 +4,10 @@
 
 /* Base layer overrides */
 @layer base {
+  :root {
+    --nav-height: 4rem; /* keep in sync with NavBar nav's h-16 */
+  }
+
   html {
     scroll-behavior: smooth;
     background-color: theme('colors.bg.DEFAULT');
@@ -19,7 +23,7 @@
 
   /* Anchor offset so sticky nav doesn't cover headings */
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: calc(var(--nav-height) + 1rem);
   }
 
   /* Visible focus rings */
@@ -47,7 +51,7 @@
 /* Component utilities */
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-5xl px-6 sm:px-8;
+    @apply mx-auto w-full max-w-5xl px-6 sm:px-8 xl:max-w-6xl;
   }
 
   .label-mono {

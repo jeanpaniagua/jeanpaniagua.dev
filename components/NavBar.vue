@@ -69,7 +69,7 @@ function close() {
         <li v-for="link in links" :key="link.href">
           <a
             :href="link.href"
-            class="block py-2 font-mono text-sm text-fg-muted hover:text-accent"
+            class="block py-3 font-mono text-sm text-fg-muted hover:text-accent"
             @click="close"
           >
             {{ link.label }}
